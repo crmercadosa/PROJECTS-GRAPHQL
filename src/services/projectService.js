@@ -10,8 +10,8 @@ module.exports = {
         return await project.save();
     },
 
-    updateProject: async (_id, projectData) => {
-        return await Project.findByIdAndUpdate(_id, projectData, { new: true });
+    updateProject: async (_id, description, startDate, endDate, status, budget) => {
+        return await Project.findByIdAndUpdate(_id, { name, description, startDate, endDate, status, budget });
     },
 
     deleteProject: async (_id) => {
